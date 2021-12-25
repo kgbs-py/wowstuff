@@ -6,7 +6,8 @@ let tabs = [
   { name: 'Dataset', fn: select_dataset },
   { name: 'Steel', fn: show_steel },
   { name: 'Ship Meta', fn: show_meta },
-  { name: 'Ship Comp', fn: show_comp }
+  { name: 'Ship Comp', fn: show_comp },
+  { name: 'History', fn: show_history }
 ]
 
 for (let tab of tabs) {
@@ -208,7 +209,7 @@ function show_steel() {
           .classed('steel-none', p => !p[1][i])
           .classed('steel-some', p => p[1][i] && p[1][i] < 30)
           //.text(p => p[1][i] && p[1][i] < 30 ? p[1][i] : '')
-          .text(p => p[1][i])
+          .text(p => p[1][i] || '-')
       }
     })
 }
@@ -243,4 +244,64 @@ function show_comp() {
   }
 
   draw_comp(files, all_ships)
+}
+
+function show_history() {
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let players = {}
+  let maps = {}
+  let results = []
+
+  for (let f of datasets) {
+    let file = datasets_files[f.file]
+    let date = f.date
+    let teams = []
+    let teamid = 0
+
+    for (let ref of Object.keys(file).sort()) {
+      let match = file[ref]
+      assert(match.teams[0].result in {victory:1,defeat:1})
+      assert(match.teams[0].claninfo.tag === 'H-O-E')
+
+      let players = new Set(match.teams[0].players.map(x=>x.name))
+
+      for (let t of teams) {
+        t.matching_player_num = [...players].filter(x => t.players.has(x)).length
+      }
+
+      let matched_team = teams.filter(t=>t.matching_player_num>=4)
+                              .sort((a,b)=>b.matching_player_num-a.matching_player_num)[0]
+
+      if (!matched_team) {
+        teams.push(matched_team = {
+          teamid: ++teamid,
+          wins: 0,
+          losses: 0,
+          matches: []
+        })
+      }
+
+      matched_team.players = players
+      matched_team.wins += match.teams[0].result === 'victory' ? 1 : 0
+      matched_team.losses += match.teams[0].result === 'defeat' ? 1 : 0
+      matched_team.matches.push(ref)
+    }
+
+    let stat = []
+
+    for (let team of teams) {
+      stat.push(`team${team.teamid} - ${team.wins}:${team.losses}`)
+    }
+
+    results.push(`${date}: ${stat.join(', ')}`)
+  }
+
+  d3.select('.tab-contents')
+    .append('pre')
+    .attr('class', 'log')
+    .text(results.join('\n'))
 }
