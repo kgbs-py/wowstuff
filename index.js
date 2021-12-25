@@ -9,8 +9,10 @@ let tabs = [
   { name: 'Ship Comp', fn: show_comp }
 ]
 
-for (let tab of tabs) tab.active = false
-tabs[0].active = true
+for (let tab of tabs) {
+  tab.active = document.location.hash.slice(1) === tab.fn.name
+}
+if (!tabs.filter(x => x.active)) tabs[0].active = true
 
 d3.select('body').html('')
 
@@ -33,7 +35,7 @@ function draw_tabs() {
       .attr('class', 'nav-item')
       .append('a')
         .attr('class', 'nav-link')
-        .attr('href', '#')
+        .attr('href', t => '#' + t.fn.name)
         .classed('active', t => t.active)
         .text(t => t.name)
         .on('click', (ev, t) => {

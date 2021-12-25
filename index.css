@@ -71,3 +71,11 @@
 .steel-some {
   background-color: #f8f895;
 }
+
+.cb-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}

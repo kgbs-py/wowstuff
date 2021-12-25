@@ -1,4 +1,4 @@
-function draw_chart(files, ships, ours) {
+function draw_chart(files, ships, ours, sort_by_perc, types) {
   let data2 = {}
   let series_keys = new Set()
 
@@ -13,6 +13,7 @@ function draw_chart(files, ships, ours) {
     let counts = {}
 
     for (let player of team.players) {
+      if (!types.has(ships[player.vehicle_id].type)) continue
       counts[normalize(ships[player.vehicle_id].name)] ??= 0
       counts[normalize(ships[player.vehicle_id].name)]++
     }
@@ -35,8 +36,10 @@ function draw_chart(files, ships, ours) {
   }
 
   data2 = Object.entries(data2).map(([k, v]) => ({ name: k, ...v })).sort((a, b) => {
-    if (a.sum === b.sum) return a.name > b.name ? 1 : -1
-    return b.sum - a.sum
+    let a_metric = sort_by_perc ? (Math.abs(a[1]) / (Math.abs(a[1]) + Math.abs(a[-1]))) : a.sum
+    let b_metric = sort_by_perc ? (Math.abs(b[1]) / (Math.abs(b[1]) + Math.abs(b[-1]))) : b.sum
+    if (a_metric === b_metric) return a.name > b.name ? 1 : -1
+    return b_metric - a_metric
   })
 
   function chart(data) {
@@ -107,8 +110,7 @@ function draw_chart(files, ships, ours) {
         .attr("height", d => y(d[0]) - y(d[1]))
         .attr("width", x.bandwidth())
       .append("title")
-        .text(d => `${d.data.name} ${d.key}
-  ${formatValue(d[1] + d[0])}`);
+        .text(d => `${d.data.name} ${formatValue(Math.abs(d[1]) + Math.abs(d[0]))}`);
 
     svg.append("g")
         .call(xAxis);
@@ -226,8 +228,57 @@ function draw_chart(files, ships, ours) {
 }
 
 function draw_meta(files, ships) {
-  draw_chart(files, ships, false)
-  draw_chart(files, ships, true)
+  let sort_by_perc = false, types = new Set()
+
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let container = d3.select('.tab-contents')
+    .append('div')
+    .attr('class', 'cb-controls')
+
+  function add_check(id, text, fn, checked) {
+    let div = container
+      .append('div')
+      .attr('class', 'form-check')
+
+    div
+      .append('input')
+      .attr('class', 'form-check-input')
+      .attr('id', id)
+      .attr('type', 'checkbox')
+      .property('checked', checked)
+      .on('change', fn)
+
+    div
+      .append('label')
+      .attr('class', 'form-check-label')
+      .attr('for', id)
+      .text(text)
+  }
+
+  add_check('sort-perc', 'sort by percentage', (ev, d) => {
+    sort_by_perc = d3.select(ev.target).property('checked')
+    refresh()
+  }, false)
+
+  for (let type of [ /*'AirCarrier',*/ 'Battleship', 'Cruiser', 'Destroyer' ]) {
+    types.add(type)
+    add_check('sort-' + type.toLowerCase(), type, (ev, d) => {
+      types[d3.select(ev.target).property('checked') ? 'add' : 'delete'](type)
+      refresh()
+    }, true)
+  }
+
+  function refresh() {
+    for (let x of Array.from(document.getElementsByTagName('svg'))) x.remove()
+    draw_chart(files, ships, false, sort_by_perc, types)
+    draw_chart(files, ships, true, sort_by_perc, types)
+  }
+
+  refresh()
 }
 
 export { draw_meta }
