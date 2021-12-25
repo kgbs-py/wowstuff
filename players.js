@@ -7,7 +7,7 @@ let players = {}
 let maps = {}
 
 for (let f of index) {
-  let file = JSON.parse(await fs.readFile('./' + f))
+  let file = JSON.parse(await fs.readFile('./data/' + f))
   let date = f.replace(/\.json$/, '')
 
   for (let match of Object.values(file)) {
@@ -47,7 +47,9 @@ console.log([''].concat(Object.keys(maps).map(x=>[x,'']).flat()).join(','))
 console.log(['map'].concat(Object.keys(maps).map(x=>['wins','losses']).flat()).join(','))
 for (let x of Array.from(all_maps).sort()) {
   let arr = [x]
-  for (let v of Object.values(maps)) arr.push(v[x]?.v || '')
-  for (let v of Object.values(maps)) arr.push(v[x]?.d || '')
+  for (let v of Object.values(maps)) {
+    arr.push(v[x]?.v || '')
+    arr.push(v[x]?.d || '')
+  }
   console.log(arr.join(','))
 }

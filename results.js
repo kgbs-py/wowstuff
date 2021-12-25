@@ -7,7 +7,7 @@ let players = {}
 let maps = {}
 
 for (let f of index) {
-  let file = JSON.parse(await fs.readFile('./' + f))
+  let file = JSON.parse(await fs.readFile('./data/' + f))
   let date = f.replace(/\.json$/, '')
   let teams = [];
   let teamid = 0;

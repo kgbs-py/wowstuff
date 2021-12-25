@@ -6,7 +6,7 @@ let index = JSON.parse(await fs.readFile('./index.json'))
 let players = {}
 
 for (let f of index) {
-  let file = JSON.parse(await fs.readFile('./' + f))
+  let file = JSON.parse(await fs.readFile('./data/' + f))
   let date = f.replace(/\.json$/, '')
 
   for (let match of Object.values(file)) {
