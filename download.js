@@ -52,8 +52,8 @@ async function process(data, teamid) {
       index = JSON.parse(await fs.readFile('index.json'))
     }
 
-    if (await fs_exists(filename)) {
-      db = JSON.parse(await fs.readFile(filename))
+    if (await fs_exists('data/' + filename)) {
+      db = JSON.parse(await fs.readFile('data/' + filename))
     }
 
     assert.strictEqual(battle.teams[0].claninfo.tag, 'H-O-E')
@@ -67,7 +67,7 @@ async function process(data, teamid) {
 
     console.log(`new battle, ${date} ${time}, ${team}, ${battle.teams[0].result}`)
     db[key] = battle
-    await fs.writeFile(filename, JSON.stringify(sort_object(db), null, 2))
+    await fs.writeFile('data/' + filename, JSON.stringify(sort_object(db), null, 2))
 
     if (!index.includes(filename)) {
       index.push(filename)
