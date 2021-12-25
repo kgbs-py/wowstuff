@@ -1,12 +1,16 @@
 const { assert } = window._deps_bridge
+import { draw_comp } from './draw_comp.js'
+import { draw_meta } from './draw_meta.js'
 
 let tabs = [
   { name: 'Dataset', fn: select_dataset },
-  { name: 'Steel', fn: show_steel }
+  { name: 'Steel', fn: show_steel },
+  { name: 'Ship Meta', fn: show_meta },
+  { name: 'Ship Comp', fn: show_comp }
 ]
 
 for (let tab of tabs) tab.active = false
-tabs[1].active = true
+tabs[0].active = true
 
 d3.select('body').html('')
 
@@ -45,6 +49,8 @@ d3.select('.tab-contents').append('p').text('loading...')
 
 let datasets = (await (await fetch('index.json')).json())
   .map(file => ({ date: file.replace(/\.json$/, ''), file: 'data/' + file, checked: true }))
+
+let all_ships = (await (await fetch('ships.json')).json())
 
 let datasets_files = {}
 
@@ -203,4 +209,36 @@ function show_steel() {
           .text(p => p[1][i])
       }
     })
+}
+
+function show_meta() {
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let files = []
+
+  for (let dataset of datasets) {
+    if (!dataset.checked) continue
+    files.push(datasets_files[dataset.file])
+  }
+
+  draw_meta(files, all_ships)
+}
+
+function show_comp() {
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let files = []
+
+  for (let dataset of datasets) {
+    if (!dataset.checked) continue
+    files.push(datasets_files[dataset.file])
+  }
+
+  draw_comp(files, all_ships)
 }
