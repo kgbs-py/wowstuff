@@ -1,19 +1,21 @@
 const { assert } = window._deps_bridge
 import { draw_comp } from './draw_comp.js'
 import { draw_meta } from './draw_meta.js'
+import { draw_maps } from './draw_maps.js'
 
 let tabs = [
   { name: 'Dataset', fn: select_dataset },
   { name: 'Steel', fn: show_steel },
   { name: 'Ship Meta', fn: show_meta },
   { name: 'Ship Comp', fn: show_comp },
+  { name: 'Maps', fn: show_maps },
   { name: 'History', fn: show_history }
 ]
 
 for (let tab of tabs) {
   tab.active = document.location.hash.slice(1) === tab.fn.name
 }
-if (!tabs.filter(x => x.active)) tabs[0].active = true
+if (!tabs.filter(x => x.active).length) tabs[0].active = true
 
 d3.select('body').html('')
 
@@ -244,6 +246,22 @@ function show_comp() {
   }
 
   draw_comp(files, all_ships)
+}
+
+function show_maps() {
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let files = []
+
+  for (let dataset of datasets) {
+    if (!dataset.checked) continue
+    files.push(datasets_files[dataset.file])
+  }
+
+  draw_maps(files)
 }
 
 function show_history() {
