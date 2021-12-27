@@ -2,6 +2,7 @@
   "type": "module",
   "scripts": {
     "build": "browserify ./bundle.js > ./build/bundle.js",
+    "push": "node download.js ; git add data ; git commit -a -m data ; git push origin gh-pages",
     "serve": "serve -l tcp://0.0.0.0:3000"
   },
   "dependencies": {
