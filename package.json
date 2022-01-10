@@ -5,6 +5,7 @@
     "push": "node download.js ; git add data ; git commit -a -m data ; git push origin gh-pages",
     "serve": "serve -l tcp://0.0.0.0:3000"
   },
+  "license": "MIT",
   "dependencies": {
     "assert": "^2.0.0",
     "browserify": "^17.0.0",
