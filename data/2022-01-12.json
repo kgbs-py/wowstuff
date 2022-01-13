@@ -1,0 +1,3418 @@
+{
+  "18:19:28-alpha": {
+    "arena_id": 5159223732148494,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T18:19:28+00:00",
+    "id": 5741331,
+    "map": {
+      "name": "Shards"
+    },
+    "map_id": 15,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -17,
+        "result": "defeat",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Jelisarius",
+            "survived": false,
+            "spa_id": 566641028,
+            "result_id": 11412992,
+            "nickname": "Jelisarius",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11412992,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "Arnianor",
+            "survived": false,
+            "spa_id": 550999524,
+            "result_id": 11412992,
+            "nickname": "Arnianor",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11412992,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11412992,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Evil_Tony",
+            "survived": false,
+            "spa_id": 505172023,
+            "result_id": 11412992,
+            "nickname": "Evil_Tony",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179507024,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11412992,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Kléber",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 20,
+        "id": 11412992,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11412992,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": 17,
+        "result": "victory",
+        "division": 1,
+        "players": [
+          {
+            "vehicle_id": 3760109296,
+            "name": "IL_MASTINO",
+            "survived": true,
+            "spa_id": 535906953,
+            "result_id": 11412991,
+            "nickname": "IL_MASTINO",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Gr3y_Ghost",
+            "survived": true,
+            "spa_id": 535564586,
+            "result_id": 11412991,
+            "nickname": "Gr3y_Ghost",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "Luckycanna",
+            "survived": true,
+            "spa_id": 529926450,
+            "result_id": 11412991,
+            "nickname": "Luckycanna",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "Ghortan",
+            "survived": true,
+            "spa_id": 531445462,
+            "result_id": 11412991,
+            "nickname": "Ghortan",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "elite92",
+            "survived": true,
+            "spa_id": 501369654,
+            "result_id": 11412991,
+            "nickname": "elite92",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Daniexpert",
+            "survived": true,
+            "spa_id": 505159414,
+            "result_id": 11412991,
+            "nickname": "Daniexpert",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500140549
+          },
+          {
+            "vehicle_id": 4074682320,
+            "name": "_Desert_Foxx",
+            "survived": true,
+            "spa_id": 556264164,
+            "result_id": 11412991,
+            "nickname": "_Desert_Foxx",
+            "ship": {
+              "name": "Goliath",
+              "level": 10
+            },
+            "clan_id": 500140549
+          }
+        ],
+        "division_rating": 23,
+        "id": 11412991,
+        "claninfo": {
+          "tag": "_IRN_",
+          "name": "Italian Royal Navy",
+          "members_count": 37,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11412991,
+          "disbanded": false
+        },
+        "clan_id": 500140549
+      }
+    ]
+  },
+  "18:35:00-alpha": {
+    "arena_id": 6547073694374979,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T18:35:00+00:00",
+    "id": 5741573,
+    "map": {
+      "name": "Riposte"
+    },
+    "map_id": 34,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -19,
+        "result": "defeat",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Jelisarius",
+            "survived": false,
+            "spa_id": 566641028,
+            "result_id": 11413475,
+            "nickname": "Jelisarius",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "Arnianor",
+            "survived": false,
+            "spa_id": 550999524,
+            "result_id": 11413475,
+            "nickname": "Arnianor",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11413475,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11413475,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11413475,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11413475,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Evil_Tony",
+            "survived": false,
+            "spa_id": 505172023,
+            "result_id": 11413475,
+            "nickname": "Evil_Tony",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 1,
+        "id": 11413475,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11413475,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": {
+          "id": 2886271,
+          "type": "demotion",
+          "victories_required": 3,
+          "battle_result_id": 11413476,
+          "target_public_rating": 1896,
+          "progress": [
+            "defeat",
+            "defeat",
+            "victory"
+          ],
+          "target": "league",
+          "battles": 5,
+          "target_division": 1,
+          "target_league": 2,
+          "target_division_rating": 96
+        },
+        "rating_delta": 0,
+        "result": "victory",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4179572688,
+            "name": "TheNick460",
+            "survived": true,
+            "spa_id": 522446948,
+            "result_id": 11413476,
+            "nickname": "TheNick460",
+            "ship": {
+              "name": "Conqueror",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 3760076784,
+            "name": "Edward_de_Vere",
+            "survived": true,
+            "spa_id": 538119671,
+            "result_id": 11413476,
+            "nickname": "Edward_de_Vere",
+            "ship": {
+              "name": "Somers",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 4074681808,
+            "name": "MKYBIZ",
+            "survived": true,
+            "spa_id": 553169293,
+            "result_id": 11413476,
+            "nickname": "MKYBIZ",
+            "ship": {
+              "name": "Alexander Nevsky",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 3760109296,
+            "name": "Klemmosen",
+            "survived": true,
+            "spa_id": 516495604,
+            "result_id": 11413476,
+            "nickname": "Klemmosen",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "A_Little_Si",
+            "survived": true,
+            "spa_id": 566469796,
+            "result_id": 11413476,
+            "nickname": "A_Little_Si",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "MisterA7",
+            "survived": false,
+            "spa_id": 509724634,
+            "result_id": 11413476,
+            "nickname": "MisterA7",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500208143
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Hackdalf_der_gemischte",
+            "survived": true,
+            "spa_id": 529411516,
+            "result_id": 11413476,
+            "nickname": "Hackdalf_der_gemischte",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500208143
+          }
+        ],
+        "division_rating": 0,
+        "id": 11413476,
+        "claninfo": {
+          "tag": "YOINK",
+          "name": "Well done, commander!",
+          "members_count": 14,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11413476,
+          "disbanded": false
+        },
+        "clan_id": 500208143
+      }
+    ]
+  },
+  "18:50:07-alpha": {
+    "arena_id": 6788910417911724,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T18:50:07+00:00",
+    "id": 5741872,
+    "map": {
+      "name": "Land of Fire"
+    },
+    "map_id": 14,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 19,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Jelisarius",
+            "survived": false,
+            "spa_id": 566641028,
+            "result_id": 11414073,
+            "nickname": "Jelisarius",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "Dr_Snak0r",
+            "survived": true,
+            "spa_id": 522001098,
+            "result_id": 11414073,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": true,
+            "spa_id": 527886188,
+            "result_id": 11414073,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11414073,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11414073,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Evil_Tony",
+            "survived": true,
+            "spa_id": 505172023,
+            "result_id": 11414073,
+            "nickname": "Evil_Tony",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "Arnianor",
+            "survived": true,
+            "spa_id": 550999524,
+            "result_id": 11414073,
+            "nickname": "Arnianor",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 20,
+        "id": 11414073,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11414073,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -20,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 3655218480,
+            "name": "Ion_666",
+            "survived": true,
+            "spa_id": 529255552,
+            "result_id": 11414074,
+            "nickname": "Ion_666",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "wonz_",
+            "survived": false,
+            "spa_id": 555620385,
+            "result_id": 11414074,
+            "nickname": "wonz_",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "zarg",
+            "survived": true,
+            "spa_id": 500478745,
+            "result_id": 11414074,
+            "nickname": "zarg",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4179507024,
+            "name": "andymc1",
+            "survived": true,
+            "spa_id": 500757003,
+            "result_id": 11414074,
+            "nickname": "andymc1",
+            "ship": {
+              "name": "Kléber",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Brenza",
+            "survived": false,
+            "spa_id": 501450743,
+            "result_id": 11414074,
+            "nickname": "Brenza",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4281219056,
+            "name": "Yamashiro42",
+            "survived": false,
+            "spa_id": 532220894,
+            "result_id": 11414074,
+            "nickname": "Yamashiro42",
+            "ship": {
+              "name": "Gearing",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "MuggyKat",
+            "survived": true,
+            "spa_id": 554223807,
+            "result_id": 11414074,
+            "nickname": "MuggyKat",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500212725
+          }
+        ],
+        "division_rating": 70,
+        "id": 11414074,
+        "claninfo": {
+          "tag": "ROUGH",
+          "name": "We come in peace!",
+          "members_count": 39,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11414074,
+          "disbanded": false
+        },
+        "clan_id": 500212725
+      }
+    ]
+  },
+  "19:13:46-alpha": {
+    "arena_id": 6318237836846353,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T19:13:46+00:00",
+    "id": 5742363,
+    "map": {
+      "name": "Shards"
+    },
+    "map_id": 15,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -21,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 3760142320,
+            "name": "Arnianor",
+            "survived": false,
+            "spa_id": 550999524,
+            "result_id": 11415056,
+            "nickname": "Arnianor",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": true,
+            "spa_id": 530683751,
+            "result_id": 11415056,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11415056,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11415056,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11415056,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11415056,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11415056,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 99,
+        "id": 11415056,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11415056,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": 21,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3760109008,
+            "name": "PoxKonki",
+            "survived": true,
+            "spa_id": 525877793,
+            "result_id": 11415055,
+            "nickname": "PoxKonki",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "maciek001",
+            "survived": true,
+            "spa_id": 502475758,
+            "result_id": 11415055,
+            "nickname": "maciek001",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "Marcintatary",
+            "survived": false,
+            "spa_id": 524326447,
+            "result_id": 11415055,
+            "nickname": "Marcintatary",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "kaspaV2",
+            "survived": true,
+            "spa_id": 530005041,
+            "result_id": 11415055,
+            "nickname": "kaspaV2",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 4179507152,
+            "name": "Defik_2015",
+            "survived": true,
+            "spa_id": 532603448,
+            "result_id": 11415055,
+            "nickname": "Defik_2015",
+            "ship": {
+              "name": "Daring",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "STEALTHZONK",
+            "survived": true,
+            "spa_id": 533017962,
+            "result_id": 11415055,
+            "nickname": "STEALTHZONK",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500140203
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "zyga76",
+            "survived": false,
+            "spa_id": 510371838,
+            "result_id": 11415055,
+            "nickname": "zyga76",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500140203
+          }
+        ],
+        "division_rating": 35,
+        "id": 11415055,
+        "claninfo": {
+          "tag": "FATTS",
+          "name": "Furious Attack Till The Success",
+          "members_count": 49,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11415055,
+          "disbanded": false
+        },
+        "clan_id": 500140203
+      }
+    ]
+  },
+  "19:27:24-alpha": {
+    "arena_id": 5810289234618567,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T19:27:24+00:00",
+    "id": 5742660,
+    "map": {
+      "name": "North"
+    },
+    "map_id": 8,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 22,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3760142320,
+            "name": "Arnianor",
+            "survived": true,
+            "spa_id": 550999524,
+            "result_id": 11415650,
+            "nickname": "Arnianor",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11415650,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Dr_Snak0r",
+            "survived": true,
+            "spa_id": 522001098,
+            "result_id": 11415650,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": true,
+            "spa_id": 527886188,
+            "result_id": 11415650,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Dhorkiy",
+            "survived": true,
+            "spa_id": 503044237,
+            "result_id": 11415650,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11415650,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11415650,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 21,
+        "id": 11415650,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11415650,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": -21,
+        "result": "defeat",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3655218480,
+            "name": "Brainzzzzz",
+            "survived": false,
+            "spa_id": 529304364,
+            "result_id": 11415649,
+            "nickname": "Brainzzzzz",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 4074681808,
+            "name": "LMGSNIPER1",
+            "survived": true,
+            "spa_id": 532078926,
+            "result_id": 11415649,
+            "nickname": "LMGSNIPER1",
+            "ship": {
+              "name": "Alexander Nevsky",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 3760109296,
+            "name": "Pyrome",
+            "survived": false,
+            "spa_id": 531170323,
+            "result_id": 11415649,
+            "nickname": "Pyrome",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 3760076784,
+            "name": "Glotzbebbel",
+            "survived": false,
+            "spa_id": 557267925,
+            "result_id": 11415649,
+            "nickname": "Glotzbebbel",
+            "ship": {
+              "name": "Somers",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "Kroko_Karl",
+            "survived": false,
+            "spa_id": 538583961,
+            "result_id": 11415649,
+            "nickname": "Kroko_Karl",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "Blackeagle2015",
+            "survived": true,
+            "spa_id": 528952635,
+            "result_id": 11415649,
+            "nickname": "Blackeagle2015",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500148595
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "KartoffelsalatX",
+            "survived": false,
+            "spa_id": 545877757,
+            "result_id": 11415649,
+            "nickname": "KartoffelsalatX",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500148595
+          }
+        ],
+        "division_rating": 0,
+        "id": 11415649,
+        "claninfo": {
+          "tag": "YOBOY",
+          "name": "Yo Boy!",
+          "members_count": 30,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11415649,
+          "disbanded": false
+        },
+        "clan_id": 500148595
+      }
+    ]
+  },
+  "19:45:55-alpha": {
+    "arena_id": 6375343722015929,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T19:45:55+00:00",
+    "id": 5743101,
+    "map": {
+      "name": "Hotspot"
+    },
+    "map_id": 9,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 18,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3969824208,
+            "name": "Dr_Snak0r",
+            "survived": true,
+            "spa_id": 522001098,
+            "result_id": 11416532,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": true,
+            "spa_id": 530683751,
+            "result_id": 11416532,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11416532,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Dhorkiy",
+            "survived": true,
+            "spa_id": 503044237,
+            "result_id": 11416532,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11416532,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11416532,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11416532,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 39,
+        "id": 11416532,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11416532,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 2,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -16,
+        "result": "defeat",
+        "division": 1,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "StuHWulf",
+            "survived": false,
+            "spa_id": 532734433,
+            "result_id": 11416531,
+            "nickname": "StuHWulf",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Noroblade",
+            "survived": true,
+            "spa_id": 532566979,
+            "result_id": 11416531,
+            "nickname": "Noroblade",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 4276041424,
+            "name": "_Chironex_",
+            "survived": false,
+            "spa_id": 543968647,
+            "result_id": 11416531,
+            "nickname": "_Chironex_",
+            "ship": {
+              "name": "Yamato",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "Bad_Moon",
+            "survived": false,
+            "spa_id": 501485192,
+            "result_id": 11416531,
+            "nickname": "Bad_Moon",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 4179539696,
+            "name": "Beyke",
+            "survived": false,
+            "spa_id": 530544963,
+            "result_id": 11416531,
+            "nickname": "Beyke",
+            "ship": {
+              "name": "Venezia",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "GreyGear",
+            "survived": false,
+            "spa_id": 529851703,
+            "result_id": 11416531,
+            "nickname": "GreyGear",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500171299
+          },
+          {
+            "vehicle_id": 4179507024,
+            "name": "Karlossal",
+            "survived": false,
+            "spa_id": 530786783,
+            "result_id": 11416531,
+            "nickname": "Karlossal",
+            "ship": {
+              "name": "Kléber",
+              "level": 10
+            },
+            "clan_id": 500171299
+          }
+        ],
+        "division_rating": 20,
+        "id": 11416531,
+        "claninfo": {
+          "tag": "OCTO",
+          "name": "Octo International",
+          "members_count": 26,
+          "color": "#e3d6a0",
+          "realm": "eu",
+          "hex_color": "#e3d6a0",
+          "id": 11416531,
+          "disbanded": false
+        },
+        "clan_id": 500171299
+      }
+    ]
+  },
+  "20:00:46-alpha": {
+    "arena_id": 6552502533042212,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T20:00:46+00:00",
+    "id": 5743480,
+    "map": {
+      "name": "Haven"
+    },
+    "map_id": 30,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -20,
+        "result": "defeat",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11417290,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11417290,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11417290,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11417290,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11417290,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11417290,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11417290,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 19,
+        "id": 11417290,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11417290,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": 22,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4074681808,
+            "name": "CorpusAurea",
+            "survived": false,
+            "spa_id": 501542454,
+            "result_id": 11417289,
+            "nickname": "CorpusAurea",
+            "ship": {
+              "name": "Alexander Nevsky",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "Falcon8994",
+            "survived": true,
+            "spa_id": 535542886,
+            "result_id": 11417289,
+            "nickname": "Falcon8994",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "Rijssie",
+            "survived": true,
+            "spa_id": 514743531,
+            "result_id": 11417289,
+            "nickname": "Rijssie",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 4179572688,
+            "name": "Mgreywood",
+            "survived": true,
+            "spa_id": 522167699,
+            "result_id": 11417289,
+            "nickname": "Mgreywood",
+            "ship": {
+              "name": "Conqueror",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 4276041424,
+            "name": "Wasnatroef",
+            "survived": false,
+            "spa_id": 534238292,
+            "result_id": 11417289,
+            "nickname": "Wasnatroef",
+            "ship": {
+              "name": "Yamato",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Revan_NL",
+            "survived": true,
+            "spa_id": 556704218,
+            "result_id": 11417289,
+            "nickname": "Revan_NL",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500187925
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PaxtonQuigly",
+            "survived": true,
+            "spa_id": 564767178,
+            "result_id": 11417289,
+            "nickname": "PaxtonQuigly",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500187925
+          }
+        ],
+        "division_rating": 12,
+        "id": 11417289,
+        "claninfo": {
+          "tag": "LEEUW",
+          "name": "The Dutch Lions",
+          "members_count": 36,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11417289,
+          "disbanded": false
+        },
+        "clan_id": 500187925
+      }
+    ]
+  },
+  "20:17:22-alpha": {
+    "arena_id": 5774439142601630,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T20:17:22+00:00",
+    "id": 5743852,
+    "map": {
+      "name": "Northern Waters"
+    },
+    "map_id": 33,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -20,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11418034,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11418034,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11418034,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11418034,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11418034,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11418034,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11418034,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 99,
+        "id": 11418034,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11418034,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": 22,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3760109296,
+            "name": "toxic32",
+            "survived": true,
+            "spa_id": 5007488,
+            "result_id": 11418033,
+            "nickname": "toxic32",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 3760109008,
+            "name": "vano1999_39region",
+            "survived": true,
+            "spa_id": 65500705,
+            "result_id": 11418033,
+            "nickname": "vano1999_39region",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 3760142160,
+            "name": "starik4477",
+            "survived": false,
+            "spa_id": 18907492,
+            "result_id": 11418033,
+            "nickname": "starik4477",
+            "ship": {
+              "name": "Bourgogne",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 4179506384,
+            "name": "makarShot",
+            "survived": false,
+            "spa_id": 62496143,
+            "result_id": 11418033,
+            "nickname": "makarShot",
+            "ship": {
+              "name": "Yueyang",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "__Deliverance__",
+            "survived": false,
+            "spa_id": 107170992,
+            "result_id": 11418033,
+            "nickname": "__Deliverance__",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "KeNTukIBrO",
+            "survived": true,
+            "spa_id": 37480476,
+            "result_id": 11418033,
+            "nickname": "KeNTukIBrO",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 423214
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "EAGLE76ru",
+            "survived": false,
+            "spa_id": 60611037,
+            "result_id": 11418033,
+            "nickname": "EAGLE76ru",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 423214
+          }
+        ],
+        "division_rating": 19,
+        "id": 11418033,
+        "claninfo": {
+          "tag": "RQGER",
+          "name": "ЧЕРНОЕ ЗНАМЯ (BLACK BANNER)",
+          "members_count": 46,
+          "color": "#bee7bd",
+          "realm": "ru",
+          "hex_color": "#bee7bd",
+          "id": 11418033,
+          "disbanded": false
+        },
+        "clan_id": 423214
+      }
+    ]
+  },
+  "20:32:32-alpha": {
+    "arena_id": 6477409324840995,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T20:32:32+00:00",
+    "id": 5744151,
+    "map": {
+      "name": "North"
+    },
+    "map_id": 8,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -19,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11418632,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760109008,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11418632,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "PantherGraph",
+            "survived": false,
+            "spa_id": 527886188,
+            "result_id": 11418632,
+            "nickname": "PantherGraph",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11418632,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11418632,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11418632,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11418632,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 80,
+        "id": 11418632,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11418632,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 19,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4179572560,
+            "name": "pireev149",
+            "survived": true,
+            "spa_id": 3385550,
+            "result_id": 11418631,
+            "nickname": "pireev149",
+            "ship": {
+              "name": "République",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "_ALPHA__MALE",
+            "survived": true,
+            "spa_id": 28519704,
+            "result_id": 11418631,
+            "nickname": "_ALPHA__MALE",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 3760109296,
+            "name": "Meduzko_O",
+            "survived": true,
+            "spa_id": 40598130,
+            "result_id": 11418631,
+            "nickname": "Meduzko_O",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 4179507024,
+            "name": "Xillet",
+            "survived": true,
+            "spa_id": 117471252,
+            "result_id": 11418631,
+            "nickname": "Xillet",
+            "ship": {
+              "name": "Kléber",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "balta98",
+            "survived": true,
+            "spa_id": 2419700,
+            "result_id": 11418631,
+            "nickname": "balta98",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "DnoGaming",
+            "survived": true,
+            "spa_id": 2294779,
+            "result_id": 11418631,
+            "nickname": "DnoGaming",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 438911
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "kastet771",
+            "survived": false,
+            "spa_id": 60890525,
+            "result_id": 11418631,
+            "nickname": "kastet771",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 438911
+          }
+        ],
+        "division_rating": 62,
+        "id": 11418631,
+        "claninfo": {
+          "tag": "M_S_D",
+          "name": "United Nations!",
+          "members_count": 45,
+          "color": "#bee7bd",
+          "realm": "ru",
+          "hex_color": "#bee7bd",
+          "id": 11418631,
+          "disbanded": false
+        },
+        "clan_id": 438911
+      }
+    ]
+  },
+  "20:49:03-alpha": {
+    "arena_id": 5813420265782087,
+    "cluster_id": 4221,
+    "finished_at": "2022-01-12T20:49:03+00:00",
+    "id": 5744455,
+    "map": {
+      "name": "Hotspot"
+    },
+    "map_id": 9,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -18,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11419240,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760109008,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11419240,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11419240,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11419240,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11419240,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11419240,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Lord_Molly",
+            "survived": true,
+            "spa_id": 516514685,
+            "result_id": 11419240,
+            "nickname": "Lord_Molly",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 62,
+        "id": 11419240,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11419240,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 20,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3760109296,
+            "name": "FurorGermanicus_",
+            "survived": false,
+            "spa_id": 529838177,
+            "result_id": 11419239,
+            "nickname": "FurorGermanicus_",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "Sakrasch",
+            "survived": true,
+            "spa_id": 500746244,
+            "result_id": 11419239,
+            "nickname": "Sakrasch",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "MyRevenge",
+            "survived": false,
+            "spa_id": 500162790,
+            "result_id": 11419239,
+            "nickname": "MyRevenge",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "hardkeks",
+            "survived": true,
+            "spa_id": 501139049,
+            "result_id": 11419239,
+            "nickname": "hardkeks",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Sowl_Kautschuk",
+            "survived": true,
+            "spa_id": 539613808,
+            "result_id": 11419239,
+            "nickname": "Sowl_Kautschuk",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "_Steiner42",
+            "survived": false,
+            "spa_id": 551948213,
+            "result_id": 11419239,
+            "nickname": "_Steiner42",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500143673
+          },
+          {
+            "vehicle_id": 3760076784,
+            "name": "Held95",
+            "survived": true,
+            "spa_id": 530936604,
+            "result_id": 11419239,
+            "nickname": "Held95",
+            "ship": {
+              "name": "Somers",
+              "level": 10
+            },
+            "clan_id": 500143673
+          }
+        ],
+        "division_rating": 18,
+        "id": 11419239,
+        "claninfo": {
+          "tag": "GWHAT",
+          "name": "Geil was?!?",
+          "members_count": 31,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11419239,
+          "disbanded": false
+        },
+        "clan_id": 500143673
+      }
+    ]
+  },
+  "21:04:18-alpha": {
+    "arena_id": 5822693100175147,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T21:04:18+00:00",
+    "id": 5744724,
+    "map": {
+      "name": "Northern Waters"
+    },
+    "map_id": 33,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 22,
+        "result": "victory",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11419778,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4282267344,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11419778,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Shimakaze",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11419778,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11419778,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": true,
+            "spa_id": 556002838,
+            "result_id": 11419778,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": true,
+            "spa_id": 555682744,
+            "result_id": 11419778,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Lord_Molly",
+            "survived": true,
+            "spa_id": 516514685,
+            "result_id": 11419778,
+            "nickname": "Lord_Molly",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 84,
+        "id": 11419778,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11419778,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": null,
+        "rating_delta": -24,
+        "result": "defeat",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 4273911792,
+            "name": "Bambi_Le_Pti_Faon",
+            "survived": false,
+            "spa_id": 540551813,
+            "result_id": 11419777,
+            "nickname": "Bambi_Le_Pti_Faon",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "Nikkea24",
+            "survived": false,
+            "spa_id": 514603016,
+            "result_id": 11419777,
+            "nickname": "Nikkea24",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Airsoftland",
+            "survived": false,
+            "spa_id": 533180815,
+            "result_id": 11419777,
+            "nickname": "Airsoftland",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "Kraken_The_Titan",
+            "survived": false,
+            "spa_id": 532562481,
+            "result_id": 11419777,
+            "nickname": "Kraken_The_Titan",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 3760076784,
+            "name": "Zahahiel",
+            "survived": true,
+            "spa_id": 557946202,
+            "result_id": 11419777,
+            "nickname": "Zahahiel",
+            "ship": {
+              "name": "Somers",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "JOKER_SURIA",
+            "survived": false,
+            "spa_id": 572720412,
+            "result_id": 11419777,
+            "nickname": "JOKER_SURIA",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500145452
+          },
+          {
+            "vehicle_id": 4179539696,
+            "name": "Alberic01",
+            "survived": true,
+            "spa_id": 544736349,
+            "result_id": 11419777,
+            "nickname": "Alberic01",
+            "ship": {
+              "name": "Venezia",
+              "level": 10
+            },
+            "clan_id": 500145452
+          }
+        ],
+        "division_rating": 19,
+        "id": 11419777,
+        "claninfo": {
+          "tag": "SURIA",
+          "name": "La famille Suricates",
+          "members_count": 46,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11419777,
+          "disbanded": false
+        },
+        "clan_id": 500145452
+      }
+    ]
+  },
+  "21:25:50-alpha": {
+    "arena_id": 6088564460700687,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T21:25:50+00:00",
+    "id": 5745086,
+    "map": {
+      "name": "Riposte"
+    },
+    "map_id": 34,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -20,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11420501,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4281219056,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11420501,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Gearing",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11420501,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11420501,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11420501,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": false,
+            "spa_id": 555682744,
+            "result_id": 11420501,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Lord_Molly",
+            "survived": false,
+            "spa_id": 516514685,
+            "result_id": 11420501,
+            "nickname": "Lord_Molly",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 64,
+        "id": 11420501,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11420501,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 19,
+        "result": "victory",
+        "division": 2,
+        "players": [
+          {
+            "vehicle_id": 3655218480,
+            "name": "Ion_666",
+            "survived": true,
+            "spa_id": 529255552,
+            "result_id": 11420502,
+            "nickname": "Ion_666",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4179507024,
+            "name": "andymc1",
+            "survived": true,
+            "spa_id": 500757003,
+            "result_id": 11420502,
+            "nickname": "andymc1",
+            "ship": {
+              "name": "Kléber",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "soulredemption",
+            "survived": true,
+            "spa_id": 520652173,
+            "result_id": 11420502,
+            "nickname": "soulredemption",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "Brenza",
+            "survived": false,
+            "spa_id": 501450743,
+            "result_id": 11420502,
+            "nickname": "Brenza",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 3760142160,
+            "name": "zarg",
+            "survived": true,
+            "spa_id": 500478745,
+            "result_id": 11420502,
+            "nickname": "zarg",
+            "ship": {
+              "name": "Bourgogne",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 4282267344,
+            "name": "RedXI",
+            "survived": true,
+            "spa_id": 503302555,
+            "result_id": 11420502,
+            "nickname": "RedXI",
+            "ship": {
+              "name": "Shimakaze",
+              "level": 10
+            },
+            "clan_id": 500212725
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "MuggyKat",
+            "survived": true,
+            "spa_id": 554223807,
+            "result_id": 11420502,
+            "nickname": "MuggyKat",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500212725
+          }
+        ],
+        "division_rating": 39,
+        "id": 11420502,
+        "claninfo": {
+          "tag": "ROUGH",
+          "name": "We come in peace!",
+          "members_count": 39,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11420502,
+          "disbanded": false
+        },
+        "clan_id": 500212725
+      }
+    ]
+  },
+  "21:42:29-alpha": {
+    "arena_id": 5662778582845352,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T21:42:29+00:00",
+    "id": 5745320,
+    "map": {
+      "name": "Shards"
+    },
+    "map_id": 15,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": -19,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11420970,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4281219056,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11420970,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Gearing",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11420970,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": false,
+            "spa_id": 555682744,
+            "result_id": 11420970,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": false,
+            "spa_id": 564633266,
+            "result_id": 11420970,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11420970,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Lord_Molly",
+            "survived": false,
+            "spa_id": 516514685,
+            "result_id": 11420970,
+            "nickname": "Lord_Molly",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 45,
+        "id": 11420970,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11420970,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 20,
+        "result": "victory",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 3760142320,
+            "name": "Der_Floki",
+            "survived": false,
+            "spa_id": 554000834,
+            "result_id": 11420969,
+            "nickname": "Der_Floki",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "M4dm4c",
+            "survived": true,
+            "spa_id": 562993827,
+            "result_id": 11420969,
+            "nickname": "M4dm4c",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 4179572176,
+            "name": "Muecke311",
+            "survived": true,
+            "spa_id": 575312791,
+            "result_id": 11420969,
+            "nickname": "Muecke311",
+            "ship": {
+              "name": "Kremlin",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "MonkeyY_1",
+            "survived": false,
+            "spa_id": 526389783,
+            "result_id": 11420969,
+            "nickname": "MonkeyY_1",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 3550360880,
+            "name": "Shagato",
+            "survived": true,
+            "spa_id": 531154072,
+            "result_id": 11420969,
+            "nickname": "Shagato",
+            "ship": {
+              "name": "Ragnar",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 3760109008,
+            "name": "Dreadnova_Darius",
+            "survived": false,
+            "spa_id": 547474843,
+            "result_id": 11420969,
+            "nickname": "Dreadnova_Darius",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 500181346
+          },
+          {
+            "vehicle_id": 3760109296,
+            "name": "Mambba",
+            "survived": false,
+            "spa_id": 529959163,
+            "result_id": 11420969,
+            "nickname": "Mambba",
+            "ship": {
+              "name": "Napoli",
+              "level": 10
+            },
+            "clan_id": 500181346
+          }
+        ],
+        "division_rating": 84,
+        "id": 11420969,
+        "claninfo": {
+          "tag": "SG2",
+          "name": "Star-Gate Team-2 (für Team-1 reicht es halt nicht, grins)",
+          "members_count": 48,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11420969,
+          "disbanded": false
+        },
+        "clan_id": 500181346
+      }
+    ]
+  },
+  "22:01:48-alpha": {
+    "arena_id": 6990649326783410,
+    "cluster_id": 4224,
+    "finished_at": "2022-01-12T22:01:48+00:00",
+    "id": 5745576,
+    "map": {
+      "name": "North"
+    },
+    "map_id": 8,
+    "realm": "eu",
+    "season_number": 15,
+    "teams": [
+      {
+        "league": 1,
+        "team_number": 1,
+        "stage": null,
+        "rating_delta": 20,
+        "result": "victory",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4281219056,
+            "name": "Dr_Snak0r",
+            "survived": false,
+            "spa_id": 522001098,
+            "result_id": 11421482,
+            "nickname": "Dr_Snak0r",
+            "ship": {
+              "name": "Gearing",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "Asco_SR",
+            "survived": false,
+            "spa_id": 530683751,
+            "result_id": 11421482,
+            "nickname": "Asco_SR",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4273911792,
+            "name": "Dhorkiy",
+            "survived": false,
+            "spa_id": 503044237,
+            "result_id": 11421482,
+            "nickname": "Dhorkiy",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3655218480,
+            "name": "rlidwka",
+            "survived": true,
+            "spa_id": 564633266,
+            "result_id": 11421482,
+            "nickname": "rlidwka",
+            "ship": {
+              "name": "Småland",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 4179539408,
+            "name": "jayceedee",
+            "survived": false,
+            "spa_id": 556002838,
+            "result_id": 11421482,
+            "nickname": "jayceedee",
+            "ship": {
+              "name": "Moskva",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3760142320,
+            "name": "_Carlo96_",
+            "survived": false,
+            "spa_id": 555682744,
+            "result_id": 11421482,
+            "nickname": "_Carlo96_",
+            "ship": {
+              "name": "Ohio",
+              "level": 10
+            },
+            "clan_id": 500202767
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "Lord_Molly",
+            "survived": false,
+            "spa_id": 516514685,
+            "result_id": 11421482,
+            "nickname": "Lord_Molly",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500202767
+          }
+        ],
+        "division_rating": 65,
+        "id": 11421482,
+        "claninfo": {
+          "tag": "H-O-E",
+          "name": "Horde of Eccentrics",
+          "members_count": 33,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11421482,
+          "disbanded": false
+        },
+        "clan_id": 500202767
+      },
+      {
+        "league": 1,
+        "team_number": 2,
+        "stage": {
+          "id": 2887176,
+          "type": "demotion",
+          "victories_required": 3,
+          "battle_result_id": 11421481,
+          "target_public_rating": 1895,
+          "progress": [],
+          "target": "league",
+          "battles": 5,
+          "target_division": 1,
+          "target_league": 2,
+          "target_division_rating": 95
+        },
+        "rating_delta": -13,
+        "result": "defeat",
+        "division": 3,
+        "players": [
+          {
+            "vehicle_id": 4273911792,
+            "name": "ThePainFactory",
+            "survived": false,
+            "spa_id": 515079968,
+            "result_id": 11421481,
+            "nickname": "ThePainFactory",
+            "ship": {
+              "name": "Des Moines",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 3760076784,
+            "name": "Phantom_1511",
+            "survived": false,
+            "spa_id": 551700897,
+            "result_id": 11421481,
+            "nickname": "Phantom_1511",
+            "ship": {
+              "name": "Somers",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 4179507152,
+            "name": "I_am_Gremon",
+            "survived": false,
+            "spa_id": 516239619,
+            "result_id": 11421481,
+            "nickname": "I_am_Gremon",
+            "ship": {
+              "name": "Daring",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 3760109008,
+            "name": "DXDraco",
+            "survived": false,
+            "spa_id": 545954248,
+            "result_id": 11421481,
+            "nickname": "DXDraco",
+            "ship": {
+              "name": "Stalingrad",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 4277090288,
+            "name": "NIGHTHAWK_X",
+            "survived": false,
+            "spa_id": 525060169,
+            "result_id": 11421481,
+            "nickname": "NIGHTHAWK_X",
+            "ship": {
+              "name": "Montana",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 4276041424,
+            "name": "Danysahne84",
+            "survived": false,
+            "spa_id": 553345930,
+            "result_id": 11421481,
+            "nickname": "Danysahne84",
+            "ship": {
+              "name": "Yamato",
+              "level": 10
+            },
+            "clan_id": 500167474
+          },
+          {
+            "vehicle_id": 3969824208,
+            "name": "xXDrunkenMonkeyXx",
+            "survived": false,
+            "spa_id": 541785167,
+            "result_id": 11421481,
+            "nickname": "xXDrunkenMonkeyXx",
+            "ship": {
+              "name": "Petropavlovsk",
+              "level": 10
+            },
+            "clan_id": 500167474
+          }
+        ],
+        "division_rating": 0,
+        "id": 11421481,
+        "claninfo": {
+          "tag": "F_F",
+          "name": "Friendly Fire",
+          "members_count": 37,
+          "color": "#bee7bd",
+          "realm": "eu",
+          "hex_color": "#bee7bd",
+          "id": 11421481,
+          "disbanded": false
+        },
+        "clan_id": 500167474
+      }
+    ]
+  }
+}
