@@ -136,7 +136,7 @@ function select_dataset() {
   select_dataset_update()
 }
 
-function show_steel() {
+function show_steel(sortby = 1) {
   d3.select('.tab-contents')
     .attr('class', 'tab-contents')
     .selectAll('*')
@@ -153,6 +153,10 @@ function show_steel() {
       let league = match.teams[0].league
 
       for (let p of match.teams[0].players) {
+        players[p.nickname] ??= {}
+        players[p.nickname].games ??= 0
+        players[p.nickname].games++
+
         if (!victory) continue
         for (let i = league; i <= 4; i++) {
           players[p.nickname] ??= {}
@@ -171,6 +175,19 @@ function show_steel() {
     return 0
   })
 
+  if (sortby != null) {
+    data = data.sort((a, b) => {
+      return ((b[1][sortby]||0) - (a[1][sortby]||0))
+    })
+  }
+
+  let max = Math.max(...data.map(x => x[1].games))
+
+  d3.select('.tab-contents')
+    .append('div')
+    .attr('class', 'show-steel-header')
+    .text('Click on column header to sort it.')
+
   d3.select('.tab-contents')
     .append('div')
     .attr('class', 'show-steel-header')
@@ -186,10 +203,21 @@ function show_steel() {
     .attr('class', 'show-steel')
 
   div.append('div').attr('class', 'show-steel-player')
-  div.append('div').attr('class', 'show-steel-l1').text('Typhoon')
-  div.append('div').attr('class', 'show-steel-l2').text('Storm+')
-  div.append('div').attr('class', 'show-steel-l3').text('Gale+')
-  div.append('div').attr('class', 'show-steel-l4').text('Squall+')
+  div.append('div').attr('class', 'show-steel-l1 sortby').text('Typhoon')
+    .classed('sortby-current', sortby === 1)
+    .on('click', () => show_steel(1))
+  div.append('div').attr('class', 'show-steel-l2 sortby').text('Storm+')
+    .classed('sortby-current', sortby === 2)
+    .on('click', () => show_steel(2))
+  div.append('div').attr('class', 'show-steel-l3 sortby').text('Gale+')
+    .classed('sortby-current', sortby === 3)
+    .on('click', () => show_steel(3))
+  div.append('div').attr('class', 'show-steel-l4 sortby').text('Squall+')
+    .classed('sortby-current', sortby === 4)
+    .on('click', () => show_steel(4))
+  div.append('div').attr('class', 'show-steel-l5 sortby').text('Games total')
+    .classed('sortby-current', sortby === 'games')
+    .on('click', () => show_steel('games'))
 
   div
     .selectAll('.show-steel')
@@ -213,6 +241,20 @@ function show_steel() {
           //.text(p => p[1][i] && p[1][i] < 30 ? p[1][i] : '')
           .text(p => p[1][i] || '-')
       }
+
+      d3.select(this)
+        .append('div')
+        .attr('class', 'show-steel-l5')
+        .append('span')
+        .attr('class', 'show-steel-cell')
+        .attr('style', p => {
+          let c = p[1].games / max
+          let h = Math.round((0 - 120) * c) + 120
+          let s = Math.round((46 - 77) * c) + 77
+          let v = Math.round((73 - 75) * c) + 75
+          return `background-color: hsl(${h}, ${s}%, ${v}%)`
+        })
+        .text(p => p[1].games || '-')
     })
 }
 

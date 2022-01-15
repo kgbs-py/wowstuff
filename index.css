@@ -42,8 +42,11 @@
 .show-steel-l4 {
   grid-column: 5;
 }
+.show-steel-l5 {
+  grid-column: 6;
+}
 
-.show-steel-l1, .show-steel-l2, .show-steel-l3, .show-steel-l4 {
+.show-steel-l1, .show-steel-l2, .show-steel-l3, .show-steel-l4, .show-steel-l5 {
   text-align: right;
 }
 
@@ -70,6 +73,12 @@
 }
 .steel-some {
   background-color: #f8f895;
+}
+.sortby {
+  cursor: pointer;
+}
+.sortby-current {
+  font-weight: bold;
 }
 
 .cb-controls {
