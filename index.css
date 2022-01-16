@@ -92,3 +92,16 @@
 pre.log {
   margin: 1rem;
 }
+
+.show-history {
+  margin: .25rem 1rem;
+  cursor: pointer;
+}
+
+.show-history-data {
+  margin-left: 1rem;
+}
+
+.show-history-data td {
+  padding: 0 .5rem;
+}

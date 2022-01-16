@@ -2,6 +2,7 @@ const { assert } = window._deps_bridge
 import { draw_comp } from './draw_comp.js'
 import { draw_meta } from './draw_meta.js'
 import { draw_maps } from './draw_maps.js'
+import { gen_history } from './show_history.js'
 
 let tabs = [
   { name: 'Dataset', fn: select_dataset },
@@ -312,56 +313,5 @@ function show_history() {
     .selectAll('*')
     .remove()
 
-  let players = {}
-  let maps = {}
-  let results = []
-
-  for (let f of datasets) {
-    let file = datasets_files[f.file]
-    let date = f.date
-    let teams = []
-    let teamid = 0
-
-    for (let ref of Object.keys(file).sort()) {
-      let match = file[ref]
-      assert(match.teams[0].result in {victory:1,defeat:1})
-      assert(match.teams[0].claninfo.tag === 'H-O-E')
-
-      let players = new Set(match.teams[0].players.map(x=>x.name))
-
-      for (let t of teams) {
-        t.matching_player_num = [...players].filter(x => t.players.has(x)).length
-      }
-
-      let matched_team = teams.filter(t=>t.matching_player_num>=4)
-                              .sort((a,b)=>b.matching_player_num-a.matching_player_num)[0]
-
-      if (!matched_team) {
-        teams.push(matched_team = {
-          teamid: ++teamid,
-          wins: 0,
-          losses: 0,
-          matches: []
-        })
-      }
-
-      matched_team.players = players
-      matched_team.wins += match.teams[0].result === 'victory' ? 1 : 0
-      matched_team.losses += match.teams[0].result === 'defeat' ? 1 : 0
-      matched_team.matches.push(ref)
-    }
-
-    let stat = []
-
-    for (let team of teams) {
-      stat.push(`team${team.teamid} - ${team.wins}:${team.losses}`)
-    }
-
-    results.push(`${date}: ${stat.join(', ')}`)
-  }
-
-  d3.select('.tab-contents')
-    .append('pre')
-    .attr('class', 'log')
-    .text(results.join('\n'))
+  gen_history(datasets, datasets_files)
 }
