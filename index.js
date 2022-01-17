@@ -10,7 +10,8 @@ let tabs = [
   { name: 'Ship Meta', fn: show_meta },
   { name: 'Ship Comp', fn: show_comp },
   { name: 'Maps', fn: show_maps },
-  { name: 'History', fn: show_history }
+  { name: 'History', fn: show_history },
+  { name: 'jay', fn: show_yt }
 ]
 
 for (let tab of tabs) {
@@ -314,4 +315,124 @@ function show_history() {
     .remove()
 
   gen_history(datasets, datasets_files)
+}
+
+function show_yt() {
+  d3.select('.tab-contents')
+    .attr('class', 'tab-contents')
+    .selectAll('*')
+    .remove()
+
+  let total = 0
+  let participated = 0
+  let lines = []
+  let ships = {}
+  let mlines = []
+
+  for (let f of datasets.slice(0).reverse()) {
+    let file = datasets_files[f.file]
+    let count = 0
+
+    mlines.push('-'.repeat(28) + ' ' + f.file.match(/\d+-\d+-\d+/)?.[0] + ' ' + '-'.repeat(28))
+    let firsttime
+
+    for (let ref of Object.keys(file).sort()) {
+      let match = file[ref]
+      total++
+
+      let p = match.teams[0].players.filter(x => x.name === 'jayceedee')[0]
+      if (!p) continue
+
+      participated++
+
+      ships[p.ship.name] ??= { w: 0, l: 0, t: 0 }
+      ships[p.ship.name].t++
+      ships[p.ship.name][match.teams[0].result === 'victory' ? 'w' : 'l']++
+
+      let arr = []
+
+      arr.push(String(++count).padStart(2) + '.   ')
+
+      function teamnu(x) {
+        if (x===1) return 'ₐ'
+        if (x===2) return 'ᵦ'
+        return '?'
+      }
+
+      arr.push((match.teams[1].claninfo.tag + teamnu(match.teams[1].team_number)).padEnd(9))
+      arr.push((match.teams[0].result === 'victory' ? 'W' : 'D') + '   ')
+      arr.push(p.ship.name.padEnd(14))
+      arr.push(match.map.name.padEnd(16))
+
+      function toleague(x) {
+        if (x===0) return 'H'
+        if (x===1) return 'T'
+        if (x===2) return 'S'
+        if (x===3) return 'G'
+        if (x===4) return 'Q'
+        return '???'
+      }
+
+      function todivision(x) {
+        if (x===1) return '1'
+        if (x===2) return '2'
+        if (x===3) return '3'
+        return '?'
+      }
+
+      function toprogress(m) {
+        if (m.stage) {
+          return `${toleague(m.league)}${toleague(m.stage.target_league)}${teamnu(m.team_number)}`
+        } else {
+          return `${toleague(m.league)}${todivision(m.division)}${teamnu(m.team_number)}`
+        }
+      }
+
+      function timediff(a, b) {
+        if (!b) b = a
+
+        let diff = a - b
+        let h = Math.floor(diff / 60 / 60 / 1000)
+        diff -= h * 60 * 60 * 1000
+        let m = Math.ceil(diff / 60 / 1000)
+        //diff -= m * 60 * 1000
+        let s = 0//Math.floor(diff / 1000)
+
+        if (m === 60) {
+          m = 0
+          h++
+        }
+
+        return [h,m,s].map(s=>String(s+100).slice(1)).join(':').slice(1)
+      }
+
+      arr.push(toprogress(match.teams[0]).padEnd(5))
+      arr.push(timediff(new Date(match.finished_at), firsttime).padStart(8))
+      firsttime ??= new Date(match.finished_at)
+      //arr.push(match.finished_at)
+
+      mlines.push(arr.join(' '))
+    }
+  }
+
+  lines.push(
+    'Personalized stats for clan members, available now for only €1799.99 + VAT. Unique offer, only 6 hours left!',
+    '',
+    `Participated in ${participated}/${total} games (${(participated/total*100).toFixed(2)}%).`,
+    '',
+    'Ships:'
+  )
+
+  for (let [ k, v ] of Object.entries(ships).sort((a, b) => b[1].t - a[1].t)) {
+    lines.push(`${k.padEnd(15)} ${String(v.w).padStart(4)} /${String(v.t).padStart(4)} (${(v.w/v.t*100).toFixed(2).padStart(6)}%)`)
+  }
+
+  lines.push('')
+
+  lines = lines.concat(mlines)
+
+  d3.select('.tab-contents')
+    .append('pre')
+    .attr('class', 'log')
+    .text(lines.join('\n'))
 }
