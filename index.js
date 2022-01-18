@@ -458,13 +458,13 @@ function show_yt() {
         [ pad_end, 10 ],
         [ pad_end, 11 ],
         [ pad_end, 4 ],
-        [ (a, b) => a + b, 0 ]
+        [ pad_end, 4 ]
       ]) {
         mlinelen += size
         mline = fn(mline, arr.shift(), mlinelen) + ' '
       }
 
-      mlines.push(mline)
+      mlines.push(mline.trim())
     }
   }
 
