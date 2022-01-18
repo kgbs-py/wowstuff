@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .nav-tabs {
   margin: .5rem .5rem 0 .5rem;
 }
@@ -91,6 +93,11 @@
 
 pre.log {
   margin: 1rem;
+}
+
+pre.log-w {
+  margin: 1rem;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .show-history {

@@ -4,6 +4,17 @@ import { draw_meta } from './draw_meta.js'
 import { draw_maps } from './draw_maps.js'
 import { gen_history } from './show_history.js'
 
+let canvas = document.createElement('canvas')
+let ctx = canvas.getContext('2d')
+ctx.font = '120px Roboto'
+
+let spw = Object.fromEntries(
+  [ '\u2003', '\u2004', '\u2005', '\u2006', '\u200A' ].map(x => [
+    x,
+    Math.round(ctx.measureText(x).width)
+  ])
+)
+
 let tabs = [
   { name: 'Dataset', fn: select_dataset },
   { name: 'Steel', fn: show_steel },
@@ -317,6 +328,33 @@ function show_history() {
   gen_history(datasets, datasets_files)
 }
 
+function pad_str(s, n) {
+  let max_width = n * ctx.measureText('w').width
+  let txt_width = ctx.measureText(s).width
+  let diff = max_width - txt_width
+  let result = ''
+
+  if (diff < 0) {
+    //console.log(s, n)
+    return result
+  }
+
+  for (let [ s, w ] of Object.entries(spw)) {
+    result += s.repeat(Math.floor(diff / w))
+    diff -= Math.floor(Math.floor(diff / w) * w)
+  }
+
+  return result
+}
+
+function pad_end(s1, s2, n) {
+  return s1 + s2 + pad_str(s1 + s2, n)
+}
+
+function pad_start(s1, s2, n) {
+  return s1 + pad_str(s1 + s2, n) + s2
+}
+
 function show_yt() {
   d3.select('.tab-contents')
     .attr('class', 'tab-contents')
@@ -351,7 +389,7 @@ function show_yt() {
 
       let arr = []
 
-      arr.push(String(++count).padStart(2) + '.   ')
+      arr.push(String(++count) + '.')
 
       function teamnu(x) {
         if (x===1) return 'ₐ'
@@ -359,10 +397,10 @@ function show_yt() {
         return '?'
       }
 
-      arr.push((match.teams[1].claninfo.tag + teamnu(match.teams[1].team_number)).padEnd(9))
-      arr.push((match.teams[0].result === 'victory' ? 'W' : 'D') + '   ')
-      arr.push(p.ship.name.padEnd(14))
-      arr.push(match.map.name.padEnd(16))
+      arr.push(match.teams[1].claninfo.tag + teamnu(match.teams[1].team_number))
+      arr.push(match.teams[0].result === 'victory' ? 'W' : 'D')
+      arr.push(p.ship.name)
+      arr.push(match.map.name)
 
       function toleague(x) {
         if (x===0) return 'H'
@@ -406,12 +444,27 @@ function show_yt() {
         return [h,m,s].map(s=>String(s+100).slice(1)).join(':').slice(1)
       }
 
-      arr.push(toprogress(match.teams[0]).padEnd(5))
-      arr.push(timediff(new Date(match.finished_at), firsttime).padStart(8))
+      arr.push(toprogress(match.teams[0]))
+      arr.push(timediff(new Date(match.finished_at), firsttime))
       firsttime ??= new Date(match.finished_at)
-      //arr.push(match.finished_at)
 
-      mlines.push(arr.join(' '))
+      let mline = ''
+      let mlinelen = 0
+
+      for (let [ fn, size ] of [
+        [ pad_end, 3 ],
+        [ pad_end, 7 ],
+        [ pad_end, 3 ],
+        [ pad_end, 10 ],
+        [ pad_end, 11 ],
+        [ pad_end, 4 ],
+        [ pad_end, 6 ],
+      ]) {
+        mlinelen += size
+        mline = fn(mline, arr.shift(), mlinelen) + ' '
+      }
+
+      mlines.push(mline)
     }
   }
 
@@ -427,12 +480,13 @@ function show_yt() {
     lines.push(`${k.padEnd(15)} ${String(v.w).padStart(4)} /${String(v.t).padStart(4)} (${(v.w/v.t*100).toFixed(2).padStart(6)}%)`)
   }
 
-  lines.push('')
-
-  lines = lines.concat(mlines)
-
   d3.select('.tab-contents')
     .append('pre')
     .attr('class', 'log')
     .text(lines.join('\n'))
+
+  d3.select('.tab-contents')
+    .append('pre')
+    .attr('class', 'log-w')
+    .text(mlines.join('\n'))
 }
