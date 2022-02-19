@@ -2,6 +2,8 @@ import assert from 'assert'
 import needle from 'needle'
 import ini from 'ini'
 import fs from 'fs/promises'
+import util from 'util'
+import child_process from 'child_process'
 
 let opts = {
   cookies: {
@@ -71,7 +73,8 @@ async function process(data, teamid) {
 
     if (!index.includes(filename)) {
       Object.values(index).slice(-1)[0].files.push(filename)
-      await fs.writeFile('index.json', JSON.stringify(index.sort(), null, 2) + '\n')
+      Object.values(index).slice(-1)[0].files.sort()
+      await fs.writeFile('index.json', JSON.stringify(index, null, 2) + '\n')
     }
   }
 }
@@ -79,3 +82,6 @@ async function process(data, teamid) {
 await process(await get(1), 1)
 await process(await get(2), 2)
 
+let pkg = JSON.parse(await fs.readFile('package.json'))
+pkg.integrity = (await util.promisify(child_process.exec)('sha1sum data/*json | sha1sum')).stdout.slice(0, 40)
+await fs.writeFile('package.json', JSON.stringify(pkg, null, 2) + '\n')
