@@ -65,7 +65,10 @@ draw_tabs()
 
 d3.select('.tab-contents').append('p').text('loading...')
 
-let datasets = (await (await fetch('index.json')).json())
+let datasets = Object.values(await (await fetch('index.json')).json())
+  .map(s => s.files)
+  .slice(1)
+  .flat()
   .map(file => ({ date: file.replace(/\.json$/, ''), file: 'data/' + file, checked: true }))
 
 let all_ships = (await (await fetch('ships.json')).json())
@@ -378,7 +381,7 @@ function show_yt() {
       let match = file[ref]
       total++
 
-      let p = match.teams[0].players.filter(x => x.name === 'jayceedee')[0]
+      let p = match.teams[0].players.filter(x => x.name === 'koendv03')[0]
       if (!p) continue
 
       participated++

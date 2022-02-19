@@ -67,11 +67,11 @@ async function process(data, teamid) {
 
     console.log(`new battle, ${date} ${time}, ${team}, ${battle.teams[0].result}`)
     db[key] = battle
-    await fs.writeFile('data/' + filename, JSON.stringify(sort_object(db), null, 2))
+    await fs.writeFile('data/' + filename, JSON.stringify(sort_object(db), null, 2) + '\n')
 
     if (!index.includes(filename)) {
-      index.push(filename)
-      await fs.writeFile('index.json', JSON.stringify(index.sort(), null, 2))
+      Object.values(index).slice(-1)[0].files.push(filename)
+      await fs.writeFile('index.json', JSON.stringify(index.sort(), null, 2) + '\n')
     }
   }
 }

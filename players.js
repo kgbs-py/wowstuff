@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import assert from 'assert'
 
-let index = JSON.parse(await fs.readFile('./index.json'))
+let index = Object.values(JSON.parse(await fs.readFile('./index.json'))).slice(-1)[0].files
 
 let players = {}
 let maps = {}
