@@ -381,7 +381,7 @@ function show_yt() {
       let match = file[ref]
       total++
 
-      let p = match.teams[0].players.filter(x => x.name === 'koendv03')[0]
+      let p = match.teams[0].players.filter(x => x.name === 'jaycedee')[0]
       if (!p) continue
 
       participated++
