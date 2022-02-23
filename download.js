@@ -71,7 +71,7 @@ async function process(data, teamid) {
     db[key] = battle
     await fs.writeFile('data/' + filename, JSON.stringify(sort_object(db), null, 2) + '\n')
 
-    if (!index.includes(filename)) {
+    if (!Object.values(index).slice(-1)[0].files.includes(filename)) {
       Object.values(index).slice(-1)[0].files.push(filename)
       Object.values(index).slice(-1)[0].files.sort()
       await fs.writeFile('index.json', JSON.stringify(index, null, 2) + '\n')
