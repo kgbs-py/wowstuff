@@ -11,7 +11,7 @@ import YTDesc from './ytdesc.jsx'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-let data = await (await fetch('/dist/data.json')).json()
+let data = await (await fetch('data.json')).json()
 
 let div = document.createElement('div')
 div.setAttribute('class', 'react-app-wrapper')

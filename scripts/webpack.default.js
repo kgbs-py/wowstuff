@@ -7,7 +7,7 @@ export default {
   entry: './src/index.jsx',
   devtool: 'eval-cheap-source-map',
   output: {
-    publicPath: '/dist/'
+    publicPath: '/wowstuff/dist/'
   },
   devServer: {
     static: {
