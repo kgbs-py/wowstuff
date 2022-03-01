@@ -1,0 +1,76 @@
+.nav-tabs
+  margin .5rem .5rem 0 .5rem
+
+.filter
+  margin 1rem
+  display inline-block
+  min-width 35rem
+
+.filter-dates
+  margin 1rem 1rem
+  display inline-grid
+  gap 0 2rem
+
+  .filter-date:nth-child(4n)
+    grid-column 4
+  .filter-date:nth-child(4n+1)
+    grid-column 1
+  .filter-date:nth-child(4n+2)
+    grid-column 2
+  .filter-date:nth-child(4n+3)
+    grid-column 3
+
+.accordion-button
+  cursor pointer
+  padding .5rem
+
+  & .form-check-input
+    margin-top 0
+  & .form-check-label
+    margin-left .5rem
+    cursor pointer
+    pointer-events none
+
+.vdgraph-wrapper
+  position relative
+
+.vdgraph-controls
+  display inline-flex
+  z-index 1
+  top 0
+  left 0
+  margin 1rem
+
+  @media (min-width: 820px)
+    position absolute
+
+.vgselect
+  min-width 10rem
+  & + &
+    margin-left .5rem
+
+.yt-desc
+  margin 0 1rem
+
+.yt-desc-item
+  display inline-flex
+  flex-direction column
+
+.yt-desc-header
+  align-items baseline
+  font-size .75em
+  color gray
+  display flex
+  gap .75rem
+  margin-top 1rem
+  margin-left .5rem
+  margin-right .5rem
+
+  &::before, &::after
+    border-top 1px solid #eee
+    padding-bottom .25em
+    flex 1 1 auto
+    content ''
+
+.yt-desc-data
+  font-family Roboto, Arial, sans-serif

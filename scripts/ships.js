@@ -1,9 +1,12 @@
 import assert from 'assert'
-import needle from 'needle'
-import ini from 'ini'
 import fs from 'fs/promises'
+import ini from 'ini'
+import needle from 'needle'
+import path from 'path'
 
-let application_id = ini.parse(await fs.readFile('./.tokens', 'utf8')).application_id
+process.chdir(path.join(path.dirname(process.argv[1]), '..'))
+
+let application_id = ini.parse(await fs.readFile('./scripts/.tokens', 'utf8')).application_id
 
 async function get(page) {
   let result = await needle('get', 'https://api.worldofwarships.eu/wows/encyclopedia/ships/?application_id=' + application_id + '&fields=nation%2Ctier%2Ctype%2Cname&page_no=' + page)
@@ -32,11 +35,11 @@ function sort_object(x) {
   )
 }
 
-async function process(data) {
+async function process_data(data) {
   let db = {}
 
-  if (await fs_exists('ships.json')) {
-    db = JSON.parse(await fs.readFile('ships.json'))
+  if (await fs_exists('./data/0000-ships.json')) {
+    db = JSON.parse(await fs.readFile('./data/0000-ships.json'))
   }
 
   for (let [ key, value ] of Object.entries(data.data)) {
@@ -45,12 +48,12 @@ async function process(data) {
     db[key] = value
   }
 
-  await fs.writeFile('ships.json', JSON.stringify(sort_object(db), null, 2))
+  await fs.writeFile('./data/0000-ships.json', JSON.stringify(sort_object(db), null, 2))
 }
 
 let page = await get(1)
-await process(page)
+await process_data(page)
 for (let i = 2; i <= page.meta.page_total; i++) {
   page = await get(i)
-  await process(page)
+  await process_data(page)
 }

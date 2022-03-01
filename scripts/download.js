@@ -1,13 +1,16 @@
 import assert from 'assert'
-import needle from 'needle'
-import ini from 'ini'
-import fs from 'fs/promises'
-import util from 'util'
 import child_process from 'child_process'
+import fs from 'fs/promises'
+import ini from 'ini'
+import needle from 'needle'
+import path from 'path'
+import util from 'util'
+
+process.chdir(path.join(path.dirname(process.argv[1]), '..'))
 
 let opts = {
   cookies: {
-    wsauth_token: ini.parse(await fs.readFile('./.tokens', 'utf8')).wsauth_token
+    wsauth_token: ini.parse(await fs.readFile('./scripts/.tokens', 'utf8')).wsauth_token
   }
 }
 
@@ -39,7 +42,7 @@ function sort_object(x) {
   )
 }
 
-async function process(data, teamid) {
+async function process_data(data, teamid) {
   let team = ({ 1: 'alpha', 2: 'bravo' })[teamid]
 
   for (let battle of data) {
@@ -50,8 +53,8 @@ async function process(data, teamid) {
     let filename = `${date}.json`
     let key = `${time}-${team}`
 
-    if (await fs_exists('index.json')) {
-      index = JSON.parse(await fs.readFile('index.json'))
+    if (await fs_exists('data/0000-index.json')) {
+      index = JSON.parse(await fs.readFile('data/0000-index.json'))
     }
 
     if (await fs_exists('data/' + filename)) {
@@ -74,13 +77,13 @@ async function process(data, teamid) {
     if (!Object.values(index).slice(-1)[0].files.includes(filename)) {
       Object.values(index).slice(-1)[0].files.push(filename)
       Object.values(index).slice(-1)[0].files.sort()
-      await fs.writeFile('index.json', JSON.stringify(index, null, 2) + '\n')
+      await fs.writeFile('data/0000-index.json', JSON.stringify(index, null, 2) + '\n')
     }
   }
 }
 
-await process(await get(1), 1)
-await process(await get(2), 2)
+await process_data(await get(1), 1)
+await process_data(await get(2), 2)
 
 let pkg = JSON.parse(await fs.readFile('package.json'))
 pkg.integrity = (await util.promisify(child_process.exec)('sha1sum data/*json | sha1sum')).stdout.slice(0, 40)

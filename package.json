@@ -1,18 +1,31 @@
 {
   "type": "module",
-  "scripts": {
-    "build": "browserify ./bundle.js > ./build/bundle.js",
-    "push": "node download.js ; git add data ; git commit -a -m data ; git push origin gh-pages",
-    "serve": "serve -l tcp://0.0.0.0:3000"
-  },
   "license": "MIT",
-  "dependencies": {
-    "assert": "^2.0.0",
-    "brain.js": "^2.0.0-beta.4",
-    "browserify": "^17.0.0",
-    "ini": "^2.0.0",
-    "needle": "^2.8.0",
-    "serve": "^12.0.0"
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve -c ./scripts/webpack.default.js",
+    "build": "webpack -c ./scripts/webpack.production.js"
   },
-  "integrity": "a95c73ddd60ad5d2c9b663189ccd31edae8c7c00"
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "bootstrap": "^5.1.3",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "ini": "^2.0.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "needle": "^3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^3.3.1",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^6.2.0",
+    "webpack": "^5.69.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "integrity": "7666d39aa3e8e24d226b9f48fde5604f0c04691a"
 }
