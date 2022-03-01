@@ -46,7 +46,10 @@ function pad_start(s1, s2, n) {
   return s1 + pad_str(s1 + s2, n) + s2
 }
 
-function get_text(battles, player) {
+function get_text(battles, player, startyttime) {
+  startyttime = (startyttime.split(':').reduce((a,b) => a*60 + Number(b), 0) * 60 * 1000) || 0
+  console.log(startyttime)
+
   let lines = []
   let count = 0
   let firstbattle
@@ -96,7 +99,7 @@ function get_text(battles, player) {
     function timediff(a, b) {
       if (!b) b = a
 
-      let diff = a - b
+      let diff = a - b + startyttime
       let h = Math.floor(diff / 60 / 60 / 1000)
       diff -= h * 60 * 60 * 1000
       let m = Math.ceil(diff / 60 / 1000)
@@ -107,6 +110,8 @@ function get_text(battles, player) {
         m = 0
         h++
       }
+
+      h = h % 10
 
       return [h,m,s].map(s=>String(s+100).slice(1)).join(':').slice(1)
     }
@@ -152,7 +157,7 @@ export default props => {
         <div className='yt-desc-item-wrapper' key={date}>
           <div className='yt-desc-item' key={date}>
             <div className='yt-desc-header'>{ date }</div>
-            <pre className='yt-desc-data'>{ get_text(by_date[date], 'jayceedee') }</pre>
+            <pre className='yt-desc-data'>{ get_text(by_date[date], props.player, props.start) }</pre>
           </div>
         </div>
       ) }

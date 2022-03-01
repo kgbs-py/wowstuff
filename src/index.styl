@@ -34,15 +34,16 @@
 .vdgraph-wrapper
   position relative
 
+  .vdgraph-controls
+    @media (min-width: 820px)
+      position absolute
+      z-index 1
+      top 0
+      left 0
+
 .vdgraph-controls
   display inline-flex
-  z-index 1
-  top 0
-  left 0
   margin 1rem
-
-  @media (min-width: 820px)
-    position absolute
 
 .vgselect
   min-width 10rem

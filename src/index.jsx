@@ -41,6 +41,11 @@ let RatingSelect = props => (
   ]} onChange={props.set} />
 )
 
+let PlayerSelect = props => (
+  <Select selected={props.val}
+          options={data.playerslist.sort().map(x => ({ value: x, title: x }))}
+          onChange={props.set} />
+)
 
 let App = () => {
   let checked = {}
@@ -172,13 +177,20 @@ let App = () => {
   })())
 
   tabs.push((() => {
+    let [ val, set ] = React.useState('jayceedee')
+    let [ valT, setT ] = React.useState('00:00')
+    let [ valTstored, setTstored ] = React.useState(valT)
     let href = 'ytdesc'
     return {
       name: 'YT Desc',
       href,
       app: (
-        <div key={href}>
-          <YTDesc data={data.battles} title='Youtube Description Generator' />
+        <div key={href} className='page-wrapper'>
+          <div className='vdgraph-controls'>
+            <PlayerSelect val={val} set={set} />
+            <input type='text' className={(valT.match(/^(\d{1,3}:)?\d{1,8}$/) ? '' : 'is-invalid ') + 'form-control vgselect'} value={valT} onChange={ev => setT(ev.target.value)} onBlur={() => setTstored(valT)} />
+          </div>
+          <YTDesc data={data.battles} player={val} start={valTstored} title='Youtube Description Generator' />
         </div>
       )
     }
