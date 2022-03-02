@@ -3,6 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "push": "node scripts/download.js ; yarn build ; git add data dist ; git commit -a -m data ; git push origin gh-pages",
     "serve": "webpack serve -c ./scripts/webpack.default.js",
     "build": "webpack -c ./scripts/webpack.production.js"
   },
@@ -27,5 +28,5 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-  "integrity": "7666d39aa3e8e24d226b9f48fde5604f0c04691a"
+  "integrity": "cd2881b0e3a0a9908d58da5a9e30e36d5261383d"
 }
