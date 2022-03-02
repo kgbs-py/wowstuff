@@ -3,7 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "push": "node scripts/download.js ; yarn build ; git add data dist ; git commit -a -m data ; git push origin gh-pages",
+    "push": "node scripts/download.js ; yarn build ; git add data dist package.json ; git commit -m data ; git push origin gh-pages",
     "serve": "webpack serve -c ./scripts/webpack.default.js",
     "build": "webpack -c ./scripts/webpack.production.js"
   },
