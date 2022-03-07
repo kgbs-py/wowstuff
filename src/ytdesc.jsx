@@ -48,7 +48,6 @@ function pad_start(s1, s2, n) {
 
 function get_text(battles, player, startyttime) {
   startyttime = (startyttime.split(':').reduce((a,b) => a*60 + Number(b), 0) * 60 * 1000) || 0
-  console.log(startyttime)
 
   let lines = []
   let count = 0

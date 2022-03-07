@@ -20,7 +20,7 @@ let FilterSeason = props => {
 
   React.useEffect(() => {
     let checks = []
-    props.data.files.forEach(file => checks.push(props.checked[file.replace(/\.json$/, '')]))
+    props.data.dates.forEach(file => checks.push(props.checked[file]))
     ref.current.checked = checked = checks.length && checks.every(x => x)
     ref.current.indeterminate = checks.some(x => x) && checks.some(x => !x)
   }, [ props ])
@@ -28,9 +28,9 @@ let FilterSeason = props => {
   function toggleAll(e) {
     let newState = !checked
     let toggles = []
-    props.data.files.forEach(file => {
-      if (!!props.checked[file.replace(/\.json$/, '')] !== newState) {
-        toggles.push(file.replace(/\.json$/, ''))
+    props.data.dates.forEach(file => {
+      if (!!props.checked[file] !== newState) {
+        toggles.push(file)
       }
     })
     props.onToggle(...toggles)
@@ -38,7 +38,7 @@ let FilterSeason = props => {
 
   function collapse(ev) {
     if (ev.target.classList.contains('form-check-input')) return
-    let el = document.getElementById(`filter-season-${props.idx}`)
+    let el = document.getElementById(`filter-season-${props.data.meta.season}`)
 
     if (el.classList.contains('show')) {
       ev.target.classList.add('collapsed')
@@ -54,15 +54,15 @@ let FilterSeason = props => {
   return (
     <div className='filter-season accordion-item'>
       <div className='accordion-header'>
-        <div className='accordion-button collapsed' data-bs-target={`#filter-season-${props.idx}`} onClick={collapse}>
+        <div className='accordion-button collapsed' data-bs-target={`#filter-season-${props.data.meta.season}`} onClick={collapse}>
           <input className='form-check-input' type='checkbox' ref={ref} onChange={toggleAll} />
           <label className='form-check-label'>{props.label}</label>
         </div>
       </div>
-      <div id={`filter-season-${props.idx}`} className='accordion-collapse collapse'>
+      <div id={`filter-season-${props.data.meta.season}`} className='accordion-collapse collapse'>
         <div className='filter-dates'>
-          { props.data.files.map(file => (
-            <FilterDate key={file} data={file.replace(/\.json$/, '')} checked={props.checked} onToggle={props.onToggle} />
+          { props.data.dates.map(file => (
+            <FilterDate key={file} data={file} checked={props.checked} onToggle={props.onToggle} />
           )) }
         </div>
       </div>
@@ -73,8 +73,8 @@ let FilterSeason = props => {
 let Filter = props => {
   return (
     <div className='filter accordion' id='filter'>
-      { Object.keys(props.data).map((key, idx) => (
-        <FilterSeason key={idx} idx={idx} data={props.data[key]} label={key} checked={props.checked} onToggle={props.toggle} />
+      { props.data.map(dataset => (
+        <FilterSeason key={dataset.meta.folder} data={dataset} label={props.index.seasons[dataset.meta.season].title} checked={props.checked} onToggle={props.toggle} />
       )) }
     </div>
   )

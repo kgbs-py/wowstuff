@@ -3,6 +3,10 @@ import fs from 'fs/promises'
 import path from 'path'
 
 
+let args = {}
+args.folder = process.argv[2]
+;[ args.season, args.clan ] = args.folder.split('.', 2)
+
 let functions = []
 let playerbyid = null
 
@@ -195,9 +199,9 @@ functions.battles = {
 
 process.chdir(path.join(path.dirname(process.argv[1]), '..'))
 
-let index = JSON.parse(await fs.readFile('data/0000-index.json'))
-let all_ships = JSON.parse(await fs.readFile('data/0000-ships.json'))
-let files = await fs.readdir('src')
+let index = JSON.parse(await fs.readFile('data/index.json'))
+let all_ships = JSON.parse(await fs.readFile('data/ships.json'))
+let files = await fs.readdir('data/' + args.folder)
 
 function aggregate(arr, keys) {
   let map = {}
@@ -218,25 +222,27 @@ function aggregate(arr, keys) {
   return Object.values(map)
 }
 
-let output = { index }
+let output = {
+  meta: args,
+  dates: files.map(f => f.replace(/\.json$/, ''))
+}
 
 for (let [ name, mod ] of Object.entries(functions)) {
   let results = []
 
-  for (let season of Object.keys(index)) {
-    for (let f of index[season].files) {
-      let file = JSON.parse(
-        await fs.readFile('data/' + f)
-      )
-      let date = f.replace(/\.json$/, '')
+  for (let f of files) {
+    let file = JSON.parse(
+      await fs.readFile('data/' + args.folder + '/' + f)
+    )
+    let date = f.replace(/\.json$/, '')
 
-      for (let match of Object.values(file)) {
-        assert(match.teams[0].result in { victory: 1, defeat: 1 })
-        assert(match.teams[0].claninfo.tag === 'H-O-E')
+    for (let match of Object.values(file)) {
+      assert(match.season_number.toString() === args.season)
+      assert(match.teams[0].claninfo.tag === args.clan.toUpperCase())
+      assert(match.teams[0].result in { victory: 1, defeat: 1 })
 
-        for (let res of mod.process(match, { season })) {
-          results.push({ date, ...res })
-        }
+      for (let res of mod.process(match)) {
+        results.push({ date, ...res })
       }
     }
   }

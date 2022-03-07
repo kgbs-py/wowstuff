@@ -38,8 +38,8 @@ function sort_object(x) {
 async function process_data(data) {
   let db = {}
 
-  if (await fs_exists('./data/0000-ships.json')) {
-    db = JSON.parse(await fs.readFile('./data/0000-ships.json'))
+  if (await fs_exists('./data/ships.json')) {
+    db = JSON.parse(await fs.readFile('./data/ships.json'))
   }
 
   for (let [ key, value ] of Object.entries(data.data)) {
@@ -48,7 +48,7 @@ async function process_data(data) {
     db[key] = value
   }
 
-  await fs.writeFile('./data/0000-ships.json', JSON.stringify(sort_object(db), null, 2))
+  await fs.writeFile('./data/ships.json', JSON.stringify(sort_object(db), null, 2))
 }
 
 let page = await get(1)

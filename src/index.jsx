@@ -7,15 +7,28 @@ import Select from './select.jsx'
 import RatingC from './rating_cont.jsx'
 import RatingD from './rating_date.jsx'
 import YTDesc from './ytdesc.jsx'
+import data_index from '../data/index.json'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-let data = await (await fetch('dist/data.json')).json()
-
 let div = document.createElement('div')
 div.setAttribute('class', 'react-app-wrapper')
-document.body.appendChild(div)
+
+if (document.body) {
+  document.body.appendChild(div)
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(div)
+  })
+}
+
+let ClanSelect = props => (
+  <Select selected={props.val} options={[
+    { value: 'H-O-E', title: 'H-O-E' },
+    { value: 'ST0RM', title: 'ST0RM' },
+  ]} onChange={props.set} />
+)
 
 let ShipSelect = props => (
   <Select selected={props.val} options={[
@@ -43,40 +56,79 @@ let RatingSelect = props => (
 
 let PlayerSelect = props => (
   <Select selected={props.val}
-          options={data.playerslist.sort().map(x => ({ value: x, title: x }))}
+          options={Array.from(new Set(props.data)).sort().map(x => ({ value: x, title: x }))}
           onChange={props.set} />
 )
 
 let App = () => {
-  let checked = {}
-  let data1 = Object.entries(Object.values(data.index))
-  for (let [ idx, season ] of data1) {
-    for (let file of season.files) {
-      checked[file.replace(/\.json$/, '')] = (+idx === data1.length - 1)
-    }
-  }
+  let [ data, setData ] = React.useState([])
+  let [ valClan, setClan ] = React.useState(Object.keys(data_index.clans)[0])
 
-  let [ val, set ] = React.useState(checked)
+  React.useEffect(async () => {
+    let datasets = data_index.clans[valClan].seasons.map(s => `dist/data.${s}.${valClan.toLowerCase()}.json`)
+    let data = await Promise.all(
+      datasets.map(async d => await (await fetch(d)).json())
+    )
+
+    /*let new_data = {}
+    for (let k of Object.keys(files[0])) {
+      new_data[k] = files.map(x => x[k]).flat()
+    }*/
+
+    let checked = { ...valFilter }
+    let firstset = Object.keys(checked).length === 0
+
+    for (let d of data) {
+      for (let date of d.dates) {
+        checked[date] ??= false
+      }
+    }
+
+    if (firstset && data.length) {
+      for (let date of data[data.length - 1].dates) {
+        checked[date] = true
+      }
+    }
+
+    setFilter(checked)
+    setData(data)
+  }, [ valClan ])
+
+  let [ valFilter, setFilter ] = React.useState({})
 
   function toggle(...data) {
-    let c = { ...val }
+    let c = { ...valFilter }
     for (let d of data) {
-      c[d] = !val[d]
+      c[d] = !valFilter[d]
     }
-    set(c)
+    setFilter(c)
   }
 
-  function filter(data) {
-    return data.filter(x => val[x.date])
+  function join(data, field) {
+    return data.map(x => x[field]).flat()
+  }
+
+  function filter(data, field) {
+    return join(data, field).filter(x => valFilter[x.date])
   }
 
   let tabs = []
 
   tabs.push((() => {
+    let href = 'filter'
     return {
       name: 'Filter',
-      href: 'filter',
-      app: <Filter key='1' data={data.index} checked={val} toggle={toggle} />
+      href,
+      app: (
+        <div key={href} className='page-wrapper'>
+          <div className='vdgraph-controls'>
+            <ClanSelect val={valClan} set={setClan} />
+          </div>
+          <div>
+            <Filter index={data_index} data={data} checked={valFilter} toggle={toggle} />
+          </div>
+        </div>
+      )
     }
   })())
 
@@ -99,8 +151,8 @@ let App = () => {
             <SortSelect val={valS} set={setS} />
             <ShipSelect val={valC} set={setC} />
           </div>
-          <VDGraph data={filterclass(filter(data.our_ships))} sort={valS} axis='ship' title='Our Ships' />
-          <VDGraph data={filterclass(filter(data.their_ships))} sort={valS} axis='ship' title='Their Ships' />
+          <VDGraph data={filterclass(filter(data, 'our_ships'))} sort={valS} axis='ship' title='Our Ships' />
+          <VDGraph data={filterclass(filter(data, 'their_ships'))} sort={valS} axis='ship' title='Their Ships' />
         </div>
       )
     }
@@ -117,8 +169,8 @@ let App = () => {
           <div className='vdgraph-controls'>
             <SortSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data.our_comps)} sort={val} axis='comp' title='Our Comps (CV-BB-CA-DD)' />
-          <VDGraph data={filter(data.their_comps)} sort={val} axis='comp' title='Their Comps (CV-BB-CA-DD)' />
+          <VDGraph data={filter(data, 'our_comps')} sort={val} axis='comp' title='Our Comps (CV-BB-CA-DD)' />
+          <VDGraph data={filter(data, 'their_comps')} sort={val} axis='comp' title='Their Comps (CV-BB-CA-DD)' />
         </div>
       )
     }
@@ -135,7 +187,7 @@ let App = () => {
           <div className='vdgraph-controls'>
             <SortSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data.maps)} sort={val} axis='map' title='Maps' />
+          <VDGraph data={filter(data, 'maps')} sort={val} axis='map' title='Maps' />
         </div>
       )
     }
@@ -152,7 +204,7 @@ let App = () => {
           <div className='vdgraph-controls'>
             <SortSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data.players)} sort={val} axis='player' title='Stat Shaming' />
+          <VDGraph data={filter(data, 'players')} sort={val} axis='player' title='Stat Shaming' />
         </div>
       )
     }
@@ -169,8 +221,8 @@ let App = () => {
           <div className='vdgraph-controls'>
             <RatingSelect val={val} set={set} />
           </div>
-          { val === 'c' && <RatingC data={data.battles} title='Clan Rating (Continuous)' /> }
-          { val === 'd' && <RatingD data={data.rating} title='Clan Rating (Daily)' /> }
+          { val === 'c' && <RatingC data={join(data, 'battles')} title='Clan Rating (Continuous)' /> }
+          { val === 'd' && <RatingD data={join(data, 'rating')} title='Clan Rating (Daily)' /> }
         </div>
       )
     }
@@ -187,10 +239,10 @@ let App = () => {
       app: (
         <div key={href} className='page-wrapper'>
           <div className='vdgraph-controls'>
-            <PlayerSelect val={val} set={set} />
-            <input type='text' className={(valT.match(/^(\d{1,3}:)?\d{1,8}$/) ? '' : 'is-invalid ') + 'form-control vgselect'} value={valT} onChange={ev => setT(ev.target.value)} onBlur={() => setTstored(valT)} />
+            <PlayerSelect data={join(data, 'playerslist')} val={val} set={set} />
+            <input type='text' className={(valT.match(/^-?(\d{1,3}:)?\d{1,8}$/) ? '' : 'is-invalid ') + 'form-control vgselect'} value={valT} onChange={ev => setT(ev.target.value)} onBlur={() => setTstored(valT)} />
           </div>
-          <YTDesc data={data.battles} player={val} start={valTstored} title='Youtube Description Generator' />
+          <YTDesc data={join(data, 'battles')} player={val} start={valTstored} title='Youtube Description Generator' />
         </div>
       )
     }
@@ -206,7 +258,7 @@ let App = () => {
   return (
     <div className='react-app'>
       <Tabs tabs={tabs} active={page} onChange={onChange} />
-      { tabs.map(tab => tab.href === page && tab.app) }
+      { data ? tabs.map(tab => tab.href === page && tab.app) : 'Loading...' }
     </div>
   )
 }
