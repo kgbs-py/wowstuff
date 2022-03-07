@@ -40,10 +40,10 @@ let ShipSelect = props => (
   ]} onChange={props.set} />
 )
 
-let SortSelect = props => (
+let ModeSelect = props => (
   <Select selected={props.val} options={[
-    { value: 'battles', title: 'sort by battles' },
-    { value: 'wr', title: 'sort by winrate' },
+    { value: 'battles', title: 'battles' },
+    { value: 'percentage', title: 'winrate' },
   ]} onChange={props.set} />
 )
 
@@ -148,11 +148,11 @@ let App = () => {
       app: (
         <div key={href} className='vdgraph-wrapper'>
           <div className='vdgraph-controls'>
-            <SortSelect val={valS} set={setS} />
+            <ModeSelect val={valS} set={setS} />
             <ShipSelect val={valC} set={setC} />
           </div>
-          <VDGraph data={filterclass(filter(data, 'our_ships'))} sort={valS} axis='ship' title='Our Ships' />
-          <VDGraph data={filterclass(filter(data, 'their_ships'))} sort={valS} axis='ship' title='Their Ships' />
+          <VDGraph data={filterclass(filter(data, 'our_ships'))} mode={valS === 'percentage' ? 'percentage' : 'battles'} sort={valS === 'percentage' ? 'wr' : 'battles'} axis='ship' title='Our Ships' />
+          <VDGraph data={filterclass(filter(data, 'their_ships'))} mode={valS === 'percentage' ? 'percentage' : 'battles'} sort={valS === 'percentage' ? 'wr' : 'battles'} axis='ship' title='Their Ships' />
         </div>
       )
     }
@@ -167,10 +167,10 @@ let App = () => {
       app: (
         <div key={href} className='vdgraph-wrapper'>
           <div className='vdgraph-controls'>
-            <SortSelect val={val} set={set} />
+            <ModeSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data, 'our_comps')} sort={val} axis='comp' title='Our Comps (CV-BB-CA-DD)' />
-          <VDGraph data={filter(data, 'their_comps')} sort={val} axis='comp' title='Their Comps (CV-BB-CA-DD)' />
+          <VDGraph data={filter(data, 'our_comps')} mode={val === 'percentage' ? 'percentage' : 'battles'} sort={val === 'percentage' ? 'wr' : 'battles'} axis='comp' title='Our Comps (CV-BB-CA-DD)' />
+          <VDGraph data={filter(data, 'their_comps')}  mode={val === 'percentage' ? 'percentage' : 'battles'} sort={val === 'percentage' ? 'wr' : 'battles'} axis='comp' title='Their Comps (CV-BB-CA-DD)' />
         </div>
       )
     }
@@ -185,9 +185,9 @@ let App = () => {
       app: (
         <div key={href} className='vdgraph-wrapper'>
           <div className='vdgraph-controls'>
-            <SortSelect val={val} set={set} />
+            <ModeSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data, 'maps')} sort={val} axis='map' title='Maps' />
+          <VDGraph data={filter(data, 'maps')} mode={val === 'percentage' ? 'percentage' : 'battles'} sort={val === 'percentage' ? 'wr' : 'battles'} axis='map' title='Maps' />
         </div>
       )
     }
@@ -202,9 +202,9 @@ let App = () => {
       app: (
         <div key={href} className='vdgraph-wrapper'>
           <div className='vdgraph-controls'>
-            <SortSelect val={val} set={set} />
+            <ModeSelect val={val} set={set} />
           </div>
-          <VDGraph data={filter(data, 'players')} sort={val} axis='player' title='Stat Shaming' />
+          <VDGraph data={filter(data, 'players')} mode={val === 'percentage' ? 'percentage' : 'battles'} sort={val === 'percentage' ? 'wr' : 'battles'} axis='player' title='Stat Shaming' />
         </div>
       )
     }
