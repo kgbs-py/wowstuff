@@ -41,7 +41,8 @@ export default {
     export_data('14.h-o-e'),
     export_data('15.h-o-e'),
     export_data('16.h-o-e'),
-    export_data('16.st0rm')
+    export_data('16.st0rm'),
+    export_data('17.st0rm')
   ],
   module: {
     rules: [
