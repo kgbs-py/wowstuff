@@ -27,6 +27,7 @@ let ClanSelect = props => (
   <Select selected={props.val} options={[
     { value: 'H-O-E', title: 'H-O-E' },
     { value: 'ST0RM', title: 'ST0RM' },
+    { value: 'OE',    title: 'OE' },
   ]} onChange={props.set} />
 )
 
