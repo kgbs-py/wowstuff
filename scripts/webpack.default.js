@@ -43,6 +43,7 @@ export default {
     export_data('16.h-o-e'),
     export_data('16.st0rm'),
     export_data('17.st0rm'),
+    export_data('17.rough'),
     export_data('17.oe')
   ],
   module: {
