@@ -44,9 +44,11 @@ export default {
     export_data('16.st0rm'),
     export_data('17.st0rm'),
     export_data('18.st0rm'),
+    export_data('19.st0rm'),
     export_data('17.rough'),
     export_data('17.oe'),
     export_data('18.a-o-n'),
+    export_data('19.munch'),
   ],
   module: {
     rules: [
