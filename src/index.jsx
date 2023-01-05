@@ -32,6 +32,7 @@ let ClanSelect = props => (
     { value: 'A-O-N', title: 'A-O-N' },
     { value: 'MUNCH', title: 'MUNCH' },
     { value: 'NTT',   title: 'NTT' },
+    { value: 'YOBOY', title: 'YOBOY' },
   ]} onChange={props.set} />
 )
 

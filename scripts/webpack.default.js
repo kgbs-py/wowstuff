@@ -50,6 +50,7 @@ export default {
     export_data('18.a-o-n'),
     export_data('19.munch'),
     export_data('19.ntt'),
+    export_data('19.yoboy'),
   ],
   module: {
     rules: [
