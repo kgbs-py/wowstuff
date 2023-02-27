@@ -239,7 +239,7 @@ for (let [ name, mod ] of Object.entries(functions)) {
     for (let match of Object.values(file)) {
       assert(match.season_number.toString() === args.season)
       assert(match.teams[0].claninfo.tag === args.clan.toUpperCase())
-      assert(match.teams[0].result in { victory: 1, defeat: 1 })
+      assert(match.teams[0].result in { victory: 1, defeat: 1, draw: 1 })
 
       for (let res of mod.process(match)) {
         results.push({ date, ...res })
